@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constant.dart';
 
 class TopBar extends StatelessWidget implements PreferredSizeWidget {
   final int currentScreenIndex;
@@ -15,7 +16,7 @@ class TopBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Color.fromARGB(255, 192, 112, 206),
+      backgroundColor: AppColors.primaryColor,
       iconTheme: IconThemeData(color: Colors.black), 
       title: null,
       actions: [

@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';  
+import '../constant.dart';
 
 class BottomBar extends StatelessWidget {
   final int currentIndex;
@@ -9,7 +10,7 @@ class BottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Color.fromARGB(255, 192, 112, 206),
+      color: AppColors.primaryColor,
       elevation: 0.0,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -27,7 +28,7 @@ class BottomBar extends StatelessWidget {
   Widget buildNavItem(IconData icon, int index) {
     return index == currentIndex
         ? FloatingActionButton(
-            backgroundColor: Color.fromARGB(255, 88, 199, 152),
+            backgroundColor: AppColors.secondaryColor,
             onPressed: () => onTap(index),
             child: Icon(icon, size: 24, color: Colors.black),
             elevation: 10.0,
